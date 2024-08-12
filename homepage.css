@@ -1,0 +1,198 @@
+html {
+    min-height: 100%;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3dabf0, #1955eb);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+header > *:first-child {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 75px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    letter-spacing: 2.5px;
+    animation: fadeIn 0.7s ease-in-out;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 107.5%;
+    height: 65px;
+    background: url('banner.png') center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 81.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#homeScreen {
+    background: linear-gradient(to bottom, #3dabf0, #1955eb);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn-link {
+    display: block;       /* Makes the anchor tag a block element */
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit;       /* Inherits the color of the parent, so the text color remains the same */
+}
+
+
+
+.grid-item {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: calc(50% - 30px);
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 30vh;
+    position: relative; /* Needed to position the nested background div */
+    cursor: pointer; /* Change the cursor to a hand when hovering over the button */
+    outline: none; /* Remove the default outline browsers apply when the button is focused */
+    border: none; 
+    background: none;
+    z-index: 1; /* Ensures the content is above the background nested div */
+    font-style: italic;
+    position: relative;  /* To position the nested background div */
+
+
+}
+
+
+/* ... your existing styles ... */
+
+.grid-item:hover {
+    transform: scale(1.02); /* Scales the button slightly on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for raised effect */
+}
+
+.grid-item:hover {
+    font-style: normal; /* Makes the text non-italic on hover */
+}
+
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 20px; /* Padding to ensure the boxes aren't touching the edges */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+    .grid-item {
+        width: 100%; /* On smaller screens, make the grid items take the full width */
+    }
+}
+
+#photo1 {
+    background-size: cover; /* This will scale the image to cover the entire element */
+    background-position: center; /* This will center the background image */
+    font-family: 'Oswald', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+
+
+}
+
+#photo2 {
+    background-image: url('path-to-your-image2.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 50px;
+
+
+
+}
+
+#photo3 {
+    background-image: url('path-to-your-image3.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 50px;
+
+
+
+}
+
+#photo4 {
+    background-image: url('path-to-your-image4.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+
+    color: white;
+}
+
+.grid-background, .overlay {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;  /* Applying the border-radius to match the button's curve */
+}
+
+
+.grid-background {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;  /* Places the background below the overlay */
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(53, 61, 180, 0.6);  /* Semi-transparent white overlay */
+    z-index: -1;  /* Overlay is above the background */
+}
+
+#photo1 .grid-background {
+    background-image: url('standard.jpg');
+}

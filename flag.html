@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlagGuessr</title>
+    <link rel="stylesheet" href="flag.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0"></script>
+
+</head>
+
+<body>
+
+    <!-- Name Input Modal -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <p id="titleform"><i>Please enter your name:</i></p>
+            <input type="text" id="playerName" placeholder="Name">
+            <button id="formButton" onclick="submitName()">Submit</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Flag Guesser</h1>
+        <h2>When ready, click begin!</h2>
+    </header>
+
+    <div class="overlay-container" id = "overlay">
+        <section class="overlay-section">
+            <div id="initialMessage">See how quickly you can guess the flags of 20 different countries!</div>
+            <div id="scoreFeedback" style="display: none;"></div>
+            <div id="timer" class="timer">00:00</div>
+            <div id="hintDisplay"></div>
+            <div id="skippedCountryDisplay"></div>
+
+            <div id="flag-container">
+                <img id="flagImg">
+                <input type="text" id="countryInput" autocomplete="off" placeholder="Type country name..." disabled>
+                <button class="overlay-button" id="beginBtn">Begin!</button>
+            <div id = "mainbuttons">
+                <button class="hint-button" id="hintBtn">Hint</button>
+                <button class="skip-button" id="skipBtn">Skip</button>
+                <button class="reset-button" id="resetBtn">End Game</button>
+            </div>   
+            </div>
+        </section>
+                
+        
+    </div>
+    
+   <!-- Score Modal -->
+    <div id="scoreModal" class="score-modal">
+        <div class="modal2-content">
+            <img id="scoreImage" src="" alt="Score Image"> 
+            <h3 id="scoreText"></h3> 
+            <button class = "done-button" id = doneBtn>Done</button>
+
+        </div>
+    </div>
+
+
+
+    
+    <script src="script.js"></script>
+
+    <audio id="correctSound" src="correct.mp3"></audio>
+    <audio id="incorrectSound" src="incorrect.wav"></audio>
+    <audio id="quizSound" src="quiz.mp3"></audio>
+    <audio id="buttonpress" src="button.wav"></audio>
+    <audio id="gameDone" src="gamewin.mp3"></audio>
+
+    <footer>
+        <h2>Created By Jonathan Bartlett</h2>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlagGuessr</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0"></script>
+
+</head>
+
+<header>
+    <h1>Flag Guesser</h1>
+</header>
+
+<div class="grid-container">
+    <button class="grid-item" id="photo1" onclick="navigateTo('flag.html')">
+        <div class="grid-background">
+            <div class="overlay"></div>
+        </div>
+        STANDARD
+    </button>
+    <button class="grid-item" id="photo2">LEVELS (coming soon)</button>
+    <button class="grid-item" id="photo3">RANKED (coming soon)</button>
+    <button class="grid-item" id="photo4">DUELS (coming soon)</button>
+</div>
+
+
+<script>
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+</script>
