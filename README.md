@@ -1,5 +1,7 @@
-Flag Quiz Game
-Welcome to the Flag Quiz Game! This engaging web-based quiz game challenges users to identify countries based on their flags. Developed using HTML, CSS, JavaScript, and the REST Countries API, this game is designed to test and improve your knowledge of world flags.
+
+#Flag Guesser 
+
+Welcome to the Flag Guesser Game! This engaging web-based quiz game challenges users to identify countries based on their flags. Developed using HTML, CSS, JavaScript, and the REST Countries API, this game is designed to test and improve your knowledge of world flags.
 
 Features
 Flag Displays: Show flags from different countries and challenge users to identify them.
